@@ -3,9 +3,9 @@ services:
   postgres:
     image: postgres:latest
     ports:
-      - '3300:3306'
+      - '3300:5432'
     volumes:
-      - ./data/var/lib/postgres
+      - ./data:/var/lib/postgres
     environment:
       - POSTGRES_DB=app
       - POSTGRES_USER=user
